@@ -6,9 +6,7 @@ const seconds = document.querySelector('#seconds');
 const currentYear = new Date().getFullYear();
 const nextYear = currentYear + 1;
 
-//const nextYearDate = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0));
-const nextYearDate = new Date(new Date().getTime() + 5000); // 10 seconds from now
-
+const nextYearDate = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0));
 
 const formatValue = (value) => (value < 10 ? `0${value}` : value);
 
