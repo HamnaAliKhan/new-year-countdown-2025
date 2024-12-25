@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://alpha.creativecirclecdn.com/environment/original/20240812-124851-c69-sky-full-of-fireworks.jpg);
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-image: url(https://alpha.creativecirclecdn.com/environment/original/20240812-124851-c69-sky-full-of-fireworks.jpg);
+    background-color: azure;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+}
+.header{
+    background-color: brown;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: antiquewhite;
+    font-size: 1.2rem;
+}
+.next-year{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color:antiquewhite;
+    margin-bottom: 10px; 
+}
+.counter{
+    display: flex;
+    justify-content: space-around;
+    background-color:lightcoral;
+    color:antiquewhite;
+    padding: 10px;
+    font-size: 20px;
+    
+}
+.hours{
+    display: flex;
+    justify-content: space-around;
+    background-color:lightcoral;
+    color:antiquewhite;
+    padding: 10px;
+    font-size: 20px;
+
+}
+.minutes{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightcoral;
+    color:antiquewhite;
+    padding: 10px;
+    font-size: 20px;
+   
+}
+.seconds{
+    display: flex;
+    justify-content: space-around;
+    background-color:lightcoral;
+    color:antiquewhite;
+    padding: 10px;
+    font-size: 20px;
+ 
+}
+.happy-new-year {
+    font-size: 3rem;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+}
+
+
+#days, #hours, #minutes, #seconds{
+    font-size: 3rem;
+    font-weight: bold;
+} 
+footer {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    z-index: 100; 
+    font-size: 14px; 
+}
+footer a {
+    color: #1e90ff; 
+    text-decoration: none; 
+}
+footer a:hover {
+    text-decoration: underline; 
+}
