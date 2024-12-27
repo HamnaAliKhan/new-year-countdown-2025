@@ -12,12 +12,16 @@ const formatValue = (value) => (value < 10 ? `0${value}` : value);
 
 let timer = setInterval(() => {
     const currentDate = new Date();
-    const totalSeconds = Math.floor((nextYearDate - currentDate) / 1000);
+
+    const currentDateUTC = Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes(), currentDate.getSeconds());
+
+    const totalSeconds = Math.floor((nextYearDate - currentDateUTC) / 1000);
 
     const daysLeft = Math.floor(totalSeconds / 3600 / 24);
-    const hoursLeft = Math.floor(totalSeconds / 3600) % 24;
-    const minutesLeft = Math.floor(totalSeconds / 60) % 60;
+    const hoursLeft = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutesLeft = Math.floor((totalSeconds % 3600) / 60);
     const secondsLeft = totalSeconds % 60;
+
 
     if (days && hours && minutes && seconds) {
         days.innerHTML = formatValue(daysLeft);
