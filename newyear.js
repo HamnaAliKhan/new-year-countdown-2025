@@ -8,6 +8,8 @@ const nextYear = currentYear + 1;
 
 const nextYearDate = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0));
 
+
+
 const formatValue = (value) => (value < 10 ? `0${value}` : value);
 
 let timer = setInterval(() => {
@@ -35,3 +37,7 @@ let timer = setInterval(() => {
         window.location.href = 'wish.html';
     }
 }, 1000);
+setTimeout(() => {
+    clearInterval(timer);
+    window.location.href = 'wish.html';
+}, 5000);
