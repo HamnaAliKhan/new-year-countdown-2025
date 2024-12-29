@@ -9,21 +9,16 @@ const nextYear = currentYear + 1;
 const nextYearDate = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0));
 
 
-
 const formatValue = (value) => (value < 10 ? `0${value}` : value);
 
 let timer = setInterval(() => {
     const currentDate = new Date();
-
-    const currentDateUTC = Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes(), currentDate.getSeconds());
-
-    const totalSeconds = Math.floor((nextYearDate - currentDateUTC) / 1000);
+    const totalSeconds = Math.floor((nextYearDate - currentDate) / 1000);
 
     const daysLeft = Math.floor(totalSeconds / 3600 / 24);
     const hoursLeft = Math.floor((totalSeconds % (3600 * 24)) / 3600);
     const minutesLeft = Math.floor((totalSeconds % 3600) / 60);
     const secondsLeft = totalSeconds % 60;
-
 
     if (days && hours && minutes && seconds) {
         days.innerHTML = formatValue(daysLeft);
@@ -37,7 +32,3 @@ let timer = setInterval(() => {
         window.location.href = 'wish.html';
     }
 }, 1000);
-setTimeout(() => {
-    clearInterval(timer);
-    window.location.href = 'wish.html';
-}, 5000);
